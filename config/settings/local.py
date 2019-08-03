@@ -1,3 +1,5 @@
+import os
+
 from .base import *  # noqa
 from .base import env
 
@@ -56,3 +58,15 @@ INSTALLED_APPS += ["django_extensions"]  # noqa F405
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ.get('DB_name', ''),
+        'USER': os.environ.get('DB_user', ''),
+        'PASSWORD': os.environ.get('DB_PASS', ''),
+        'NAME': os.environ.get('DB_name', ''),
+        'HOST': 'localhost',
+        'PORT': '5432'
+    }
+}

@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11fdc443-724b-4728-a749-fde102c2fafc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/schooling.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/schooling.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schooling/users/migrations/0002_auto_20190815_1656.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings/local.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements/local.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/local.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schooling/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/schooling/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schooling/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/schooling/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schooling/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/schooling/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schooling/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/schooling/users/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,29 +23,20 @@
     <option name="myUseModuleSdk" value="true" />
     <option name="myModuleName" value="schooling" />
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>DATA</find>
-      <find>DATABASES</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="366" />
-    <option name="y" value="112" />
-    <option name="width" value="974" />
-    <option name="height" value="555" />
-  </component>
   <component name="ProjectId" id="1OhgqhKKThLQr24C5DV2gIPnh0F" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Salah_stuff/computer science/Back-end/CBBMS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/schooling/media/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,6 +44,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/schooling/media/images" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -76,6 +76,11 @@
       <workItem from="1562845447519" duration="179000" />
       <workItem from="1563031845899" duration="11342000" />
       <workItem from="1564435462575" duration="2543000" />
+      <workItem from="1564866521670" duration="615000" />
+      <workItem from="1565275190378" duration="2860000" />
+      <workItem from="1565288158218" duration="4468000" />
+      <workItem from="1565355567012" duration="1918000" />
+      <workItem from="1565538922916" duration="22198000" />
     </task>
     <servers />
   </component>
@@ -87,10 +92,25 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/config/settings/local.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

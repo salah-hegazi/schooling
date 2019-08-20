@@ -277,6 +277,10 @@ pip-selfcheck.json
 .env
 
 
+### Editor files
+.idea/workspace.xml
+
+
 ### Project template
 
 schooling/media/

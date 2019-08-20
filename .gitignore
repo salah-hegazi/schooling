@@ -277,9 +277,8 @@ pip-selfcheck.json
 .env
 
 
-### Editor cofigurations
+### Editor files
 .idea/workspace.xml
-
 
 
 ### Project template

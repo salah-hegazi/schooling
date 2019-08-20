@@ -19,12 +19,6 @@
     <option name="myUseModuleSdk" value="true" />
     <option name="myModuleName" value="schooling" />
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>DATA</find>
-      <find>DATABASES</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -35,7 +29,9 @@
     <option name="height" value="555" />
   </component>
   <component name="ProjectId" id="1OhgqhKKThLQr24C5DV2gIPnh0F" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -87,7 +83,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

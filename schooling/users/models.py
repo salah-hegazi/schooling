@@ -3,6 +3,8 @@ from django.db import models
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 
+from phonenumber_field.modelfields import PhoneNumberField
+
 
 class Grade(models.Model):
     """
@@ -47,6 +49,9 @@ class Parent(models.Model):
     """
     A profile model that stores more information related to user type parent
     """
+    # Using phonenumber_field third package to
+    # define phonenumber in E.164 format
+    phone_number = PhoneNumberField(_("Phone number of Parent"), unique=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE,
                                 related_name='parent')
 
@@ -58,6 +63,9 @@ class ManagerialEmployee(models.Model):
     """
     A profile model that stores more information related to user type staff
     """
+    # Using phonenumber_field third package to
+    # define phonenumber in E.164 format
+    phone_number = PhoneNumberField(_("Phone number of Employee"), unique=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE,
                                 related_name='staff')
 
@@ -69,6 +77,9 @@ class Teacher(models.Model):
     """
     A profile model that stores more information related to user type Teacher
     """
+    # Using phonenumber_field third package to
+    # define phonenumber in E.164 format
+    phone_number = PhoneNumberField(_("Phone number of Teacher"), unique=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE,
                                 related_name='teacher')
 

@@ -72,12 +72,12 @@ THIRD_PARTY_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "rest_framework",
+    "rest_framework.authtoken",
 ]
 
 LOCAL_APPS = [
     "schooling.users.apps.UsersConfig",
-    # Your stuff: custom apps go here
-    "rest_framework.authtoken",
+    "schooling.messaging.apps.MessagingConfig",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

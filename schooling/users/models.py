@@ -6,12 +6,26 @@ from django.utils.translation import ugettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
 
 
+class School(models.Model):
+    """
+    A model that represents a school entity
+    """
+    code = models.CharField(_("Code of school"), max_length=10, unique=True)
+    name = models.CharField(_("Name of school"), max_length=100)
+    address = models.CharField(_("Address of school"), max_length=150)
+
+    def __str__(self):
+        return self.name
+
+
 class Grade(models.Model):
     """
     A model that represents school years
     """
     code = models.CharField(_("Code of grade"), max_length=10, unique=True)
-    name = models.CharField(_("Name of grade"), max_length=50, unique=True)
+    name = models.CharField(_("Name of grade"), max_length=50)
+    school = models.ForeignKey(School, on_delete=models.CASCADE,
+                               related_name='grades')
 
     def __str__(self):
         return self.name
@@ -50,10 +64,11 @@ class Parent(models.Model):
     A profile model that stores more information related to user type parent
     """
     # Using phonenumber_field third package to
-    # define phonenumber in E.164 format
+    # define phone number in E.164 format
     phone_number = PhoneNumberField(_("Phone number of Parent"), unique=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE,
                                 related_name='parent')
+    schools = models.ManyToManyField(School, related_name='parents')
 
     def __str__(self):
         return self.user.username
@@ -64,10 +79,13 @@ class ManagerialEmployee(models.Model):
     A profile model that stores more information related to user type staff
     """
     # Using phonenumber_field third package to
-    # define phonenumber in E.164 format
-    phone_number = PhoneNumberField(_("Phone number of Employee"), unique=True)
+    # define phone number in E.164 format
+    phone_number = PhoneNumberField(_("Phone number of Employee"),
+                                    unique=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE,
                                 related_name='staff')
+    school = models.ForeignKey(School, on_delete=models.CASCADE,
+                               related_name='staff')
 
     def __str__(self):
         return self.user.username
@@ -78,10 +96,12 @@ class Teacher(models.Model):
     A profile model that stores more information related to user type Teacher
     """
     # Using phonenumber_field third package to
-    # define phonenumber in E.164 format
+    # define phone number in E.164 format
     phone_number = PhoneNumberField(_("Phone number of Teacher"), unique=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE,
                                 related_name='teacher')
+    school = models.ForeignKey(School, on_delete=models.CASCADE,
+                               related_name='teachers')
 
     def __str__(self):
         return self.user.username
@@ -112,6 +132,8 @@ class Student(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE,
                                 related_name='student')
     parent = models.ForeignKey(Parent, on_delete=models.CASCADE,
+                               related_name='students')
+    school = models.ForeignKey(School, on_delete=models.CASCADE,
                                related_name='students')
     classroom = models.ForeignKey(ClassRoom, on_delete=models.CASCADE,
                                   related_name='students')
